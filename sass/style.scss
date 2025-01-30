@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css?family=Maven+Pro:400,700");
+
+// VARIABLES
+$font-base: "Maven Pro", sans-serif;
+$body-font-size: 18px;
+$h1-font-size: 2.8em;
+$h2-font-size: 2.4em;
+
+$font-weight-bold: bold;
+$font-weight-normal: normal;
+$font-weight-light: 300;
+
+$h1-font-color: #212121;
+$h2-font-color: #353535;
+$h3-font-color: #484848;
+$body-font-color: #5b5b5b;
+$text-white: #ffffff;
+$dark-mode-color: #0c0c0d;
+$main-color: #3997c2;
+$border-color: #f2f2f1;
+$button-color: #474559;
+
+$small-font-size: 14px;
+$link-font-size: 16px;
+
+@mixin transition-effect {
+  transition: all 0.4s ease;
+}
+
+body {
+  font-family: $font-base;
+  padding-top: 70px;
+}
+
+.full-screen {
+  padding: 8rem 0;
+}
+
+.small-text {
+  color: $body-font-color;
+  font-size: $small-font-size;
+  font-weight: $font-weight-bold;
+  padding: 8px 16px;
+  border-radius: 50px;
+  letter-spacing: 0.2px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+  }
+}
+
+a {
+  font-size: $link-font-size;
+  font-weight: $font-weight-normal;
+  text-decoration: none !important;
+  @include transition-effect;
+  &:hover {
+    color: $main-color !important;
+  }
+}
+
+.navbar-brand {
+  .uil {
+    font-size: 40px;
+  }
+}
+
+// NAVBAR
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999999;
+  will-change: transform;
+  transition: transform 200ms linear;
+  &[class*="-unpinned"] {
+    transform: translate(0, -150%);
+  }
+
+  &[class*="-pinned"] {
+    transform: translate(0, 0);
+  }
+  &[class*="headroom--not-top"] {
+    background: $text-white;
+    // box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.09);
+    border-bottom: 1px solid #f0f0f0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.navbar-brand {
+  font-weight: $font-weight-bold;
+}
+
+.navbar-expand-sm {
+  .navbar-nav {
+    .nav-link {
+      padding: 0 20px;
+    }
+  }
+}
+
+.nav-link {
+  font-weight: $font-weight-bold;
+  font-size: 16px;
+  overflow: hidden;
+  span {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s;
+    &:before {
+      position: absolute;
+      top: 100%;
+      content: attr(data-hover);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
+
+.navbar-light {
+  .navbar-nav {
+    .nav-link:focus,
+    .nav-link:hover {
+      color: $main-color;
+      font-weight: $font-weight-bold;
+      span {
+        transform: translateY(-100%);
+      }
+    }
+  }
+}
+
+// HAMBURGER NAVBAR
+.navbar-light {
+  .navbar-toggler-icon {
+    background: none;
+  }
+}
+
+.navbar-toggler {
+  border: 0;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  outline: none;
+  cursor: pointer;
+  margin-right: 10px;
+  &:focus {
+    outline: none;
+  }
+  &[aria-expanded="true"] {
+    .navbar-toggler-icon {
+      &:first-child {
+        transform: rotate(45deg);
+        top: 6px;
+      }
+      &:nth-child(2) {
+        display: none;
+      }
+      &:last-child {
+        transform: rotate(-45deg);
+        bottom: 1px;
+      }
+    }
+  }
+  .navbar-toggler-icon {
+    background: $h1-font-color;
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin: 5px 0;
+    @include transition-effect;
+    position: relative;
+  }
+}
+
+// COLOR MODE
+.color-mode {
+  font-weight: $font-weight-bold;
+  cursor: pointer;
+}
+
+.color-mode-icon {
+  position: relative;
+  right: 6px;
+  &:after {
+    font-family: "unicons";
+    content: "\ea9f";
+    font-size: 30px;
+    font-weight: 300;
+    font-style: normal;
+  }
+  &.active {
+    &:after {
+      font-family: "unicons";
+      content: "\eb65";
+      font-size: 30px;
+      color: $text-white;
+    }
+  }
+}
