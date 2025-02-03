@@ -205,3 +205,105 @@ a {
     }
   }
 }
+
+// TYPOGRAPHY
+p {
+  font-size: $body-font-size;
+  font-weight: $font-weight-light;
+  line-height: 1.5;
+  color: $body-font-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $font-weight-bold;
+  letter-spacing: -1px;
+}
+
+h1 {
+  color: $h1-font-color;
+  font-size: $h1-font-size;
+  margin: 24px 0;
+}
+
+h2 {
+  color: $h2-font-color;
+  font-size: $h2-font-size;
+  font-weight: $font-weight-bold;
+}
+
+h3 {
+  color: $h3-font-color;
+}
+
+h3,
+b,
+strong {
+  font-weight: $font-weight-bold;
+}
+
+// ANIMATED TEXT
+.animated {
+  position: relative;
+}
+
+.animated-info {
+  display: flex;
+  vertical-align: top;
+  margin-top: 5px;
+  height: 40px;
+  width: 260px;
+  position: relative;
+}
+
+.animated-item {
+  font-size: 32px;
+  color: $main-color;
+  line-height: inherit;
+  display: inline-block;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  animation: BottomTotop 6s linear infinite 0s;
+  &:nth-child(2n + 2) {
+    animation-delay: 2s;
+  }
+  &:nth-child(3n + 3) {
+    animation-delay: 4s;
+  }
+}
+
+@keyframes BottomTotop {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  30% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
