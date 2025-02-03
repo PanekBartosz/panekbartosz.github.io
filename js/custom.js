@@ -37,3 +37,11 @@
   // TOOLTIP
   $(".social-links a").tooltip();
 })(jQuery);
+
+//REDIRECT URL
+document.addEventListener("DOMContentLoaded", function () {
+  const redirectInput = document.getElementById("redirect-url");
+  if (redirectInput) {
+    redirectInput.value = window.location.href;
+  }
+});

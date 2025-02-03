@@ -369,6 +369,53 @@ h5 i {
   color: #333;
 }
 
+.google-map iframe {
+  width: 100%;
+}
+
+.contact-form {
+  position: relative;
+}
+.contact-form .form-control {
+  background: transparent;
+  border-radius: 2px;
+  outline: none;
+  box-shadow: none;
+  font-weight: bold;
+  margin: 16px 0;
+}
+.contact-form .form-control:not(textarea) {
+  height: 48px;
+}
+.contact-form .form-control:hover,
+.contact-form .form-control:focus {
+  border-color: #3997c2;
+}
+.contact-form .submit-btn {
+  background: #3997c2;
+  border-radius: 50px;
+  color: #ffffff;
+  font-weight: bold;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.contact-form .submit-btn:hover {
+  background: #47455985;
+}
+
+.contact-info {
+  background: #47455985;
+  border-radius: 0 0 3px 3px;
+  position: relative;
+  bottom: 8px;
+  padding: 40px;
+}
+.contact-info p,
+.contact-info a {
+  color: #f7f3f3;
+}
+
 .copyright-text {
   font-size: 16px;
   font-weight: normal;
