@@ -315,7 +315,17 @@ h5 i {
 .owl-theme .owl-nav [class*="owl-"]:hover {
   color: #3997c2;
 }
-
+.owl-theme .owl-dots .owl-dot {
+  outline: none;
+}
+.owl-theme .owl-dots .owl-dot span {
+  width: 8px;
+  height: 8px;
+}
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: #5b5b5b;
+}
 .skills {
   padding: 60px 0;
 }
@@ -352,6 +362,11 @@ h5 i {
 
 .custom-icon {
   font-size: 1.3rem;
+}
+
+.project-description p {
+  font-size: 1rem;
+  color: #333;
 }
 
 @media (min-width: 1270px) {
