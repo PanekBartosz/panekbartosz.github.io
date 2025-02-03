@@ -350,6 +350,10 @@ h5 i {
   background-color: #3997c2;
 }
 
+.custom-icon {
+  font-size: 1.3rem;
+}
+
 @media (min-width: 1270px) {
   .owl-theme .owl-dots {
     position: relative;
