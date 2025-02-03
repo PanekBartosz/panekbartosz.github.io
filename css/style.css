@@ -49,7 +49,6 @@ h1,
 h2,
 h3,
 h4,
-h5,
 h6 {
   font-weight: bold;
   letter-spacing: -1px;
@@ -75,6 +74,11 @@ h3,
 b,
 strong {
   font-weight: bold;
+}
+
+h5 i {
+  color: #3997c2;
+  letter-spacing: -1px;
 }
 
 .custom-btn {
@@ -309,8 +313,43 @@ strong {
   font-size: inherit;
 }
 .owl-theme .owl-nav [class*="owl-"]:hover {
-  color: #ffc200;
+  color: #3997c2;
 }
+
+.skills {
+  padding: 60px 0;
+}
+
+.skills .section-title {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.skills h4 {
+  margin-top: 40px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.skills .skill-item h5 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.skills .progress {
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+}
+
+.skills .progress-bar {
+  font-size: 14px;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 10px;
+  background-color: #3997c2;
+}
+
 @media (min-width: 1270px) {
   .owl-theme .owl-dots {
     position: relative;
